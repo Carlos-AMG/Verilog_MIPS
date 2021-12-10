@@ -1,0 +1,126 @@
+lw $10 $16 #0
+lw $11 $16 #1
+sw $10 $18 #0
+slt $2 $10 $11
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #0
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #1
+addi $27 $26 #1
+addi $26 $27 #0
+nop //segunda iteracion
+lw $11 $16 #2
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #1
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #2
+addi $27 $26 #1
+addi $26 $27 #0
+nop //tercera iteracion
+lw $11 $16 #3
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #2
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #3
+addi $27 $26 #1
+addi $26 $27 #0
+nop //cuarta iteracion
+lw $11 $16 #4
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #3
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #4
+addi $27 $26 #1
+addi $26 $27 #0
+nop //quinta iteracion
+lw $11 $16 #5
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #4
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #5
+addi $27 $26 #1
+addi $26 $27 #0
+nop //sexta iteracion
+lw $11 $16 #6
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #5
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #6
+addi $27 $26 #1
+addi $26 $27 #0
+nop //septima iteracion
+lw $11 $16 #7
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #6
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #7
+addi $27 $26 #1
+addi $26 $27 #0
+nop //octava iteracion
+lw $11 $16 #8
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #7
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #8
+addi $27 $26 #1
+addi $26 $27 #0
+nop //novena iteracion
+lw $11 $16 #9
+slt $2 $10 $11
+slt $3 $11 $10
+beq $2 $1 #4 // ACOMODA, CAMBIAR LOS OFFSET si el numero es mayor
+sw $11 $17 #8
+addi $25 $24 #1
+addi $24 $25 #0
+beq $2 $0 #3 // ACOMODA, CAMBIAR LOS OFFSET si el numero es menor
+sw $11 $18 #9
+addi $27 $26 #1
+addi $26 $27 #0
+nop ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+beq $6 $26 #9 // compara los counters
+addi $7 $18 #1
+addi $18 $7 #0
+lw $13 $18 #0
+beq $13 $14 #4 //compara con ausencia de numeros
+sw $13 $16 #0
+addi $31 $6 #1
+addi $6 $31 #0
+addi $16 $6 #0
+j $109
+beq $29 $28 #4
+addi $12 $29 #1
+addi $29 $12 #0
+sw $14 $29 #0
+j $119
+beq $
+j $1
